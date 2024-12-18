@@ -34,10 +34,11 @@ input, select, button {
 
 .book-card {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
     padding: 15px;
-    border-bottom: 1px solid #eee;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    margin-bottom: 15px;
     transition: background-color 0.3s;
 }
 
@@ -45,24 +46,103 @@ input, select, button {
     background-color: #f1f1f1;
 }
 
-.book-card .book-actions {
-    display: flex;
-    gap: 10px;
+.book-card .card-title {
+    font-size: 16px;
 }
 
-.book-card .delete-btn, .book-card .status-btn {
-    padding: 5px 10px;
+.book-card .card-title strong {
+    font-size: 18px;
+}
+
+.book-card .card-title span {
+    display: block;
+    font-size: 14px;
+    color: #555;
+}
+
+.card-delete {
+    padding: 8px 12px;
     border: none;
-    border-radius: 3px;
+    background-color: #ff6b6b;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+#books-container {
+    display: grid;
+    gap: 2rem;
+}
+
+.card-delete:hover {
+    background-color: #ff4d4d;
+}
+
+.available {
+    border-left: 5px solid #4caf50;
+    background-color: #e8f5e9;
+}
+
+.borrowed {
+    border-left: 5px solid #ff9800;
+    background-color: #fff3e0;
+}
+
+.reserved {
+    border-left: 5px solid #2196f3;
+    background-color: #e3f2fd;
+}
+
+.card {
+    padding: 2rem;
+}
+
+.card .card-title strong {
+    color: #333;
+}
+
+.card .card-title span {
+    color: #777;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #4ecdc4;
+    color: white;
     cursor: pointer;
 }
 
-.book-card .delete-btn {
-    background-color: #ff6b6b;
-    color: white;
+button:hover {
+    background-color: #3abfa4;
 }
 
-.book-card .status-btn {
-    background-color: #4ecdc4;
-    color: white;
+input:invalid, select:invalid {
+    border-color: #ff6b6b;
+    background-color: #ffe6e6;
+}
+
+input:invalid:focus, select:invalid:focus {
+    border-color: #ff4d4d;
+}
+
+.error-message {
+    color: #f70202;
+    background-color: #ffe6e6;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 15px;
+    border: 1px solid #f70202;
+}
+
+.error-message-small {
+    color: #f70202;
+    padding: 2px;
+    margin-top: 4px;
 }
