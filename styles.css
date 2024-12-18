@@ -1,0 +1,68 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.book-form, .filters, .books-list {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+form {
+    display: grid;
+    gap: 15px;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.book-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.3s;
+}
+
+.book-card:hover {
+    background-color: #f1f1f1;
+}
+
+.book-card .book-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.book-card .delete-btn, .book-card .status-btn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.book-card .delete-btn {
+    background-color: #ff6b6b;
+    color: white;
+}
+
+.book-card .status-btn {
+    background-color: #4ecdc4;
+    color: white;
+}
